@@ -4,9 +4,12 @@
   padding: 0;
 }
 
-html { font-size: 16px; }
+html {
+  font-size: 16px;
+}
+
 body {
-  position: relative; 
+  position: relative;
   min-height: 100vh;
   font-family: sans-serif;
 }
@@ -49,8 +52,9 @@ body {
   right: 0;
   font-style: italic;
   color: #777;
-
-  &:hover {
-    color: steelblue;
-  }
 }
+#joke-credits:hover {
+  color: steelblue;
+}
+
+/*# sourceMappingURL=style.css.map */

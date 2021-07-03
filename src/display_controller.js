@@ -4,6 +4,7 @@ const displayController = (() => {
     const jokeSetup = document.createElement('p');
     const jokePunchline = document.createElement('p');
 
+    jokeContainer.id = 'joke-container';
     jokeSetup.id = 'joke-setup';
     jokePunchline.id = 'joke-punchline';
 
@@ -24,11 +25,22 @@ const displayController = (() => {
     return newJokeContainer;
   }
 
+  const generateCredits = () => {
+    const a = document.createElement('a');
+
+    a.id = 'joke-credits';
+    a.textContent = "Jokes from https://github.com/15Dkatz/official_joke_api";
+    a.setAttribute('href', 'https://github.com/15Dkatz/official_joke_api');
+    a.setAttribute('target', '_blank');
+
+    return a;
+  }
+
   const generateJokeAppContainer = () => {
     const jokeAppContainer = document.createElement('div');
     jokeAppContainer.id = 'joke-app-container';
 
-    [generateJokeContainer(), generateNewJokeBtn()].forEach(el => jokeAppContainer.appendChild(el));
+    [generateJokeContainer(), generateNewJokeBtn(), generateCredits()].forEach(el => jokeAppContainer.appendChild(el));
     return jokeAppContainer;
   }
 
